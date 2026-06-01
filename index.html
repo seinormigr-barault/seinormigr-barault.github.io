@@ -281,7 +281,7 @@ body .container__content > div h3 {
     }
 
     /* LIEN TABLEAU */
-    .lien-TB{
+    .lien-TB, .lien-PNMA-OFB{
         border:none;
         background:rgba(84, 114, 174, 0.75);
         border-radius:20px;
@@ -294,7 +294,7 @@ body .container__content > div h3 {
       transition: all 200ms ease-in-out
     }
 
-    .lien-TB:hover{
+    .lien-TB:hover, .lien-PNMA-OFB:hover{
         color:#ffffff;
       background-color: rgba(84, 114, 174, 1);
         box-shadow:0px 0px 5px grey;
@@ -730,6 +730,14 @@ footer div {
     background-color : rgba(84, 114, 174, 0.1);
     cursor: pointer;
 }
+  
+  .portail-PNMA-OFB {
+  text-align: center;
+}
+
+.liensAM {
+  text-align: center;
+}
 </style>
 
 
@@ -818,7 +826,7 @@ Ce travail repose sur une dynamique forte des 7 Associations Migrateurs (AM) de 
   <div id="tableau-container">&nbsp;</div>
 </div>
 <p>&nbsp;</p>
-<div class="opmb-tableaux-publiques__open">En cas de difficult&eacute;s d&#39;affichage : <a class="lien-TB" data-role="open-tableau" href="#" rel="noopener noreferrer" target="_blank"> Ouvrir sur Tableau Public </a></div>
+<div>En cas de difficult&eacute;s d&#39;affichage : <a class="lien-TB" data-role="open-tableau" href="#" rel="noopener noreferrer" target="_blank"> Ouvrir sur Tableau Public </a></div>
 	</div>
 	<div id="pour-aller-plus-loin" class="section4 section">
     <div id="bloc1" class="bloc1">
@@ -843,7 +851,7 @@ En tant qu'instance de concertation des différents acteurs de la gestion des po
     </div>
     <br>
     <div id="bloc3" class="bloc3">
-    <h4 class="liensAM">Pour en savoir plus, vous pouvez visiter les sites web et  tableaux de bord des poissons amphihalins de chaque associations migrateurs et ainsi en apprendre plus sur l'état des populations de ces espèces localement sur les grands bassins fluviaux français.</h4>
+    <h5 class="liensAM">Pour en savoir plus, vous pouvez visiter les sites web et  tableaux de bord des poissons amphihalins de chaque associations migrateurs et ainsi en apprendre plus sur l'état des populations de ces espèces localement sur les grands bassins fluviaux français.</h5>
       
 <!-- Début Grille AM -->
 <section id="team" class="team content-section">
@@ -1021,6 +1029,8 @@ En tant qu'instance de concertation des différents acteurs de la gestion des po
 <!-- Fin Grille AM -->
       
       </div>
+      </section>
+    <div class="portail-PNMA-OFB"><h5>Pour en savoir plus sur le Plan national en faveur des migrateurs amphihalins, vous pouvez visiter la page dédiée sur le portail technique de l'OFB </h5><br><a class="lien-PNMA-OFB" href="https://professionnels.ofb.fr/fr/node/1240" target="_blank"> professionnels.ofb.fr/fr/node/1240 </a></div>
 	</div>
 </div>
     
@@ -1032,7 +1042,10 @@ En tant qu'instance de concertation des différents acteurs de la gestion des po
     <p class="copyright">© Associations Migrateurs de France - 2026  &nbsp;|&nbsp;  <a class="bouton mentions-legales" href="#image1">Mentions légales</a></p>
     
   </div>
-  <img class="logo-OFB" src="https://www.seinormigr.fr/msmedias/Tableau_de_Bord/logo-AM-indinat/OFB.png?max=300"/>
+  <a href="https://ofb.gouv.fr/" target="_blank">
+	<img class="logo-OFB" alt="Logo OFB" src="https://www.seinormigr.fr/msmedias/Tableau_de_Bord/logo-AM-indinat/OFB.png?max=300"/>
+</a>
+
   <!-- début gestion lightbox -->
   <div class="lightbox short-animate" id="image1">
     <span class="long-animate">
