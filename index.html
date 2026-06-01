@@ -826,7 +826,7 @@ Ce travail repose sur une dynamique forte des 7 Associations Migrateurs (AM) de 
   <div id="tableau-container">&nbsp;</div>
 </div>
 <p>&nbsp;</p>
-<div>En cas de difficult&eacute;s d&#39;affichage : <a class="lien-TB" data-role="open-tableau" href="#" rel="noopener noreferrer" target="_blank"> Ouvrir sur Tableau Public </a></div>
+<div>En cas de difficultés d'affichage : <a class="lien-TB" data-role="open-tableau" href="#" rel="noopener noreferrer" target="_blank"> Ouvrir sur Tableau Public </a></div>
 	</div>
 	<div id="pour-aller-plus-loin" class="section4 section">
     <div id="bloc1" class="bloc1">
@@ -1090,7 +1090,7 @@ Publication : Juin 2026.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	$('a[href^="#"]').not('[href="#image1"]').not('[href="#!"]').on('click',function (e) {
+	$('a[href^="#"]').not('[href="#image1"]').not('[href="#!"]').not('[data-role="open-tableau"]').on('click',function (e) {
 	    e.preventDefault();
 
 	    var target = this.hash;
@@ -1285,22 +1285,22 @@ const tableauLinks = {
     "Effectifs de géniteurs potentiels de Grandes aloses":
     "https://public.tableau.com/views/ALASTACOMI2024/TB?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
 
-    "Indice reproduction Aloses feintes":
+    "Indice de l’activité de reproduction des Aloses feintes":
     "https://public.tableau.com/views/ALFREPRO2024/TB?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
 
-    "Indice reproduction Aloses agones":
+    "Indice de l’activité de reproduction des Aloses agones":
     "https://public.tableau.com/views/ALGREPRO2024/TB?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
 
-    "Effectifs lamproies marines":
+    "Effectifs de géniteurs potentiels de Lamproies marines aux stations de comptage des migrations":
     "https://public.tableau.com/views/LPMSTACOMI2024/TB?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
 
-    "Indice reproduction lamproies marines":
+    "Indice de l’activité de reproduction des Lamproies marines":
     "https://public.tableau.com/views/LPMREPRO2024/TB?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
 
-    "Effectifs truite de mer":
+    "Effectifs de géniteurs potentiels de Truites de mer aux stations de comptage des migrations":
     "https://public.tableau.com/views/TRMSTACOMI2024/TB?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
 
-    "Effectifs mulet porc":
+    "Effectifs de Mulets porcs aux stations de comptage des migrations":
     "https://public.tableau.com/views/MUPSTACOMI2024/TB?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
 
 };
