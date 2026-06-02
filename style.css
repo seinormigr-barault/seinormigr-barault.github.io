@@ -16,7 +16,7 @@ main {
   color: rgba(84, 114, 174, 1);
 }
 .titre-header-mobile {
-  display: none;
+  display: none !important;
 }
 @media (max-width: 768px) {
   .titre-header {
