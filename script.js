@@ -41,24 +41,21 @@ $(window).scroll(function () {
 // ======================
 
 const speciesImages = {
-  Saumon: "https://www.seinormigr.fr/msmedias/especes/saumon-mer.png?max=400",
+  Saumon: "https://seinormigr-barault.github.io/assets/SAT.png?max=400",
 
-  "Grande alose":
-    "https://www.seinormigr.fr/msmedias/especes/Grande-Alose.png?max=400",
+  "Grande alose": "https://seinormigr-barault.github.io/assets/ALA.png?max=400",
 
-  "Alose feinte":
-    "https://www.seinormigr.fr/msmedias/especes/Alose-feinte.png?max=400",
+  "Alose feinte": "https://seinormigr-barault.github.io/assets/ALF.png?max=400",
 
   "Alose agone": "url",
 
   "Lamproie marine":
-    "https://www.seinormigr.fr/msmedias/especes/LAMPROIE-MARINE-sans.png?max=400",
+    "https://seinormigr-barault.github.io/assets/LPM.png?max=400",
 
   "Truite de mer":
-    "https://www.seinormigr.fr/msmedias/especes/Truite-de-mer-adulte.png?max=400",
+    "https://seinormigr-barault.github.io/assets/TRM.png?max=400",
 
-  "Mulet porc":
-    "https://www.seinormigr.fr/msmedias/especes/MULET-officiel-sans.png?max=400"
+  "Mulet porc": "https://seinormigr-barault.github.io/assets/MUP.png?max=400"
 };
 
 // ======================
@@ -333,3 +330,20 @@ select.addEventListener("change", function () {
 buildDropdown();
 
 // Fin widget de visualisation des indicateurs
+
+// Début menu burger
+$(".burger, .overlay").click(function () {
+  $(".burger").toggleClass("clicked");
+  $(".overlay").toggleClass("show");
+  $(".menu-mobile").toggleClass("show");
+  $("body").toggleClass("overflow");
+});
+
+// Fermeture du menu au clic sur un lien
+$(".menu-mobile a").click(function () {
+  $(".burger").removeClass("clicked");
+  $(".overlay").removeClass("show");
+  $(".menu-mobile").removeClass("show");
+  $("body").removeClass("overflow");
+});
+// Fin menu burger
