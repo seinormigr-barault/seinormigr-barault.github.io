@@ -53,35 +53,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="./style.css">
-  
-  <title>IndiNAT</title>
+  <link rel="stylesheet" href="seinormigr-barault.github.io/style.css">
+
+  <title>INDINATPOMI</title>
 </head>
 
 <body>
   <main>
     <header class="static-header">
       <img class="banniere-AM" src="https://seinormigr-barault.github.io/assets/banniere-AM.png?max=1000" />
-      <div class="chapeau">
-        <p class="p-chapeau">Dans le cadre du Plan National de Gestion des Poissons Migrateurs Amphihalins (PNMA), les Associations Migrateurs de France ont développé le projet INDINAT, dont l’objectif est de produire des indicateurs sur les poissons migrateurs à
-          l’échelle nationale. Après un an et demi de travail collectif, les premiers indicateurs sont désormais disponibles. Ils peuvent être consultés, ou le seront prochainement, sur les sites internet des différentes associations migrateurs.</p>
-      </div>
-      <nav>
-        <a href="#pnma">Le PNMA</a>
-        <a href="#indinat">Le projet IndiNAT</a>
-        <a href="#indicateurs">Les indicateurs</a>
-        <a href="#pour-aller-plus-loin">Pour aller plus loin...</a>
-      </nav>
+      <h2 class="titre-header">INDICATEURS NATIONAUX DES POISSONS MIGRATEURS<h2>
+          <div class="chapeau">
+            <p class="p-chapeau">Dans le cadre du Plan National de Gestion des Poissons Migrateurs Amphihalins (PNMA), les Associations Migrateurs de France ont développé le projet INDINAT, dont l’objectif est de produire des indicateurs sur les poissons migrateurs à l’échelle nationale. Après un an et demi de travail collectif, les premiers indicateurs sont désormais disponibles. Ils peuvent être consultés ici. Il seront mis à jour régulièrement complétés progressivement par de nouveaux indicateurs.</p>
+          </div>
+          <nav>
+            <a href="#pnma">Le PNMA</a>
+            <a href="#indinat">Le projet IndiNAT</a>
+            <a href="#indicateurs">Les indicateurs</a>
+            <a href="#pour-aller-plus-loin">Pour aller plus loin...</a>
+          </nav>
     </header>
     <header class="fixed-header">
       <div class="fheader__container">
         <img src="https://seinormigr-barault.github.io/assets/banniere-AM.png?max=1000" width="50px" height="auto" />
-        <nav>
+        <nav class="fixed-header-nav">
           <a href="#pnma">Le PNMA</a>
           <a href="#indinat">Le projet IndiNAT</a>
           <a href="#indicateurs">Les indicateurs</a>
           <a href="#pour-aller-plus-loin">Pour aller plus loin...</a>
         </nav>
+        <div class="burger-container">
+          <div class="burger">
+            <span></span>
+          </div>
+          <nav class="menu-mobile">
+            <ul class="main">
+              <li class="lien-menu-mobile"><a href="#pnma">Le PNMA</a></li>
+              <li class="lien-menu-mobile"><a href="#indinat">Le projet IndiNAT</a></li>
+              <li class="lien-menu-mobile"><a href="#indicateurs">Les indicateurs</a></li>
+              <li class="lien-menu-mobile"><a href="#pour-aller-plus-loin">Pour aller plus loin...</a></li>
+            </ul>
+          </nav>
+          <div class="overlay"></div>
+        </div>
       </div>
     </header>
     <div class="container__content">
@@ -231,7 +245,7 @@
                       <p class="p-AM">LOGRAMI</p>
                     </div>
                   </div>
-                  
+
                   <!-- AM -->
                   <div id="MIGADO" class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-member">
@@ -363,7 +377,7 @@
           </div>
           </section>
           <div class="portail-PNMA-OFB">
-            <h5>Pour en savoir plus sur le Plan national en faveur des migrateurs amphihalins, vous pouvez visiter la page dédiée sur le portail technique de l'OFB </h5>
+            <h5 class="liens-PNMA-OFB">Pour en savoir plus sur le Plan national en faveur des migrateurs amphihalins, vous pouvez visiter la page dédiée sur le portail technique de l'OFB </h5>
             <br><a class="lien-PNMA-OFB" href="https://professionnels.ofb.fr/fr/node/1240" target="_blank"> professionnels.ofb.fr/fr/node/1240 </a>
           </div>
         </div>
@@ -374,12 +388,14 @@
   <footer>
     <div class="div-footer-1">
       <p class="p-footer">Projet financé par l'Office Français pour la Biodiversité (OFB)</p>
+      <a class="lien-site-OFB-mobile" href="https://ofb.gouv.fr/" target="_blank">
+        <img class="logo-OFB" alt="Logo OFB" src="https://seinormigr-barault.github.io/assets/OFB.png?max=300" />
+      </a>
       <p class="copyright">© Associations Migrateurs de France - 2026 &nbsp;|&nbsp; <a class="bouton mentions-legales" href="#image1">Mentions légales</a></p>
-
+      <a class="lien-site-OFB" href="https://ofb.gouv.fr/" target="_blank">
+        <img class="logo-OFB" alt="Logo OFB" src="https://seinormigr-barault.github.io/assets/OFB.png?max=300" />
+      </a>
     </div>
-    <a href="https://ofb.gouv.fr/" target="_blank">
-      <img class="logo-OFB" alt="Logo OFB" src="https://seinormigr-barault.github.io/assets/OFB.png?max=300" />
-    </a>
 
     <!-- début gestion lightbox -->
     <div class="lightbox short-animate" id="image1">
@@ -390,9 +406,9 @@
           <hr style="width: 50%; margin: 0 auto;">
           <br>
           <p>
-            <a href="www.github.indinat.io">www.github.indinat.io</a> est une site collaboratif porté par les Associations Migrateurs de France : Bretagne Grands Migrateurs, Loire Grand Migrateurs, Migrateurs Garonne Dordogne Charentte Seudre, Migrateurs Adour, Migrateurs Rhône Médtiterranée, Rhin Meuse Migrateurs et Seine-Normandie-Migrateurs.
+            <a href="www.github.indinat.io">www.github.indinat.io</a> est une site collaboratif porté par les Associations Migrateurs de France : Bretagne Grands Migrateurs, Loire Grand Migrateurs, Migrateurs Garonne Dordogne Charente Seudre, Migrateurs Adour, Migrateurs Rhône Médtiterranée, Rhin Meuse Migrateurs et Seine-Normandie-Migrateurs.
             <br><br>
-            <strong>Coordinateur du projet :</strong> François Albert (Chargé de mission à Migrateurs Garonne Dordogne Charentte Seudre)
+            <strong>Coordinateur du projet :</strong> François Albert (Chargé de mission à Migrateurs Garonne Dordogne Charente Seudre)
             <br>
             <strong>Responsable du site :</strong> Adrien Barault (Responsable technique à Seine Normandie Migrateurs)
             <br><br>
@@ -404,7 +420,7 @@
             <br><br>
             <strong>Propriété intellectuelle :</strong> L'ensemble des contenus présents sur ce site restent la propriété de leurs auteurs respectifs sauf mention contraire.
             <br><br>
-            <strong>Formet de données :</strong> Outil
+            <strong>Format de données :</strong> Outil
             <br><br>
             <strong>Conditions d'accès et d'utilisation :</strong> Pas de restriction d’accès public. Usage libre sous réserve de mentionner obligatoirement sur tout document de diffusion : "© Associations Migrateurs de France - www.github.indinat.io".
             <br><br>
@@ -424,8 +440,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-  <script src="./script.js"></script>
-    
+  <script src="seinormigr-barault.github.io/script.js"></script>
+
 </body>
 
 </html>
