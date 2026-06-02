@@ -482,17 +482,6 @@ body .container__content > div h3 {
 }
 
 /* LIEN TABLEAU */
-.ouvrir-TB-mobile {
-  display: none;
-}
-@media (max-width: 768px) {
-  .ouvrir-TB-mobile {
-    display: block;
-  }
-  .ouvrir-TB {
-    display: none;
-  }
-}
 
 .lien-TB,
 .lien-PNMA-OFB {
@@ -993,6 +982,6 @@ footer div {
     display: none;
   }
   .icone-siteweb {
-    display: inline-block;
+    display: inline-block !important;
   }
 }
