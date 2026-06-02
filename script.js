@@ -318,8 +318,10 @@ select.addEventListener("change", function () {
   // Mise à jour lien Tableau Public
   if (tableauLinks[indicator]) {
     tableauLink.href = tableauLinks[indicator];
+    tableauLink.target = "_blank";
   } else {
-    tableauLink.href = "#";
+    tableauLink.href = "#indicateurs";
+    tableauLink.target = "_self";
   }
 });
 
