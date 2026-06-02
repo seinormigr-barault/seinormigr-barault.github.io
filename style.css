@@ -12,6 +12,10 @@ main {
   flex: 1;
 }
 
+.titre-header {
+  color: rgba(84, 114, 174, 1);
+}
+
 .chapeau {
   background-color: rgba(84, 114, 174, 1);
   color: white;
@@ -39,6 +43,11 @@ p:not(.p-AM, .p-chapeau, .copyright, .p-footer),
   .chronologie-PNMA {
     width: 100%;
     height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .p-AM {
+    display: none;
   }
 }
 
@@ -125,14 +134,195 @@ body .fixed-header .fheader__container img {
   border-radius: 4px;
 }
 
-body .fixed-header .fheader__container nav {
+.fixed-header-nav {
   padding: 5px 0;
   width: 100%;
   float: right;
   text-align: right;
 }
+.burger-container {
+  display: none;
+}
+@media (max-width: 768px) {
+  .fixed-header-nav,
+  .fixed-header-nav a {
+    display: none;
+  }
+  body .fixed-header .fheader__container img {
+    float: left;
+    height: auto;
+    width: 100%;
+    border-radius: 3px;
+  }
 
-body .fixed-header .fheader__container nav a {
+  /*  Début menu burger monbile */
+  body.overflow {
+    overflow: hidden;
+  }
+  .burger-container {
+    display: block;
+  }
+  .burger {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 4px;
+    z-index: 10;
+  }
+
+  .burger span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-left: -15px;
+    margin-top: -1.5px;
+    transition: all 0.3s ease;
+  }
+
+  .burger span:before,
+  .burger span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  .burger span:before {
+    top: -9px;
+  }
+
+  .burger span:after {
+    top: 9px;
+  }
+
+  .burger.clicked span {
+    background: transparent;
+  }
+
+  .burger.clicked span:before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: #ffffff;
+  }
+
+  .burger.clicked span:after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: #ffffff;
+  }
+
+  .burger:hover {
+    cursor: pointer;
+  }
+  .burger:hover span:before,
+  .burger:hover span:after,
+  .burger:not(.clicked):hover span {
+    background: #ae9054;
+  }
+
+  .menu-mobile {
+    background-color: rgba(84, 114, 174, 1);
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: 515px;
+    width: 65%;
+    padding-top: 75px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+
+  .menu-mobile.show {
+    transform: translateX(0px);
+  }
+
+  .menu-mobile.show ul.main li {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .menu-mobile.show ul.main li:nth-child(1) {
+    transition-delay: 0.15s;
+  }
+
+  .menu-mobile.show ul.main li:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+
+  .menu-mobile.show ul.main li:nth-child(3) {
+    transition-delay: 0.45s;
+  }
+
+  .menu-mobile.show ul.main li:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+
+  .menu-mobile ul.main {
+    list-style-type: none;
+  }
+
+  .menu-mobile ul.main li {
+    margin-bottom: 20px;
+    transform: translateX(40px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu-mobile ul.main li:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .menu-mobile ul.main li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+  }
+
+  .menu-mobile ul.main li a span {
+    color: #b7ac7f;
+  }
+
+  .menu-mobile ul.main li a:hover {
+    color: #b7ac7f;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(174, 144, 84, 1);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .overlay.show {
+    opacity: 0.5;
+    visibility: visible;
+  }
+
+  /*  Fin menu burger monbile */
+}
+
+.fixed-header-nav a {
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -144,15 +334,15 @@ body .fixed-header .fheader__container nav a {
   margin-right: 5px;
   margin-left: 5px;
 }
-body .fixed-header .fheader__container nav a:not(:last-of-type) {
+.fixed-header-nav a:not(:last-of-type) {
   border-right: solid 1px white;
 }
 
-body .fixed-header .fheader__container nav a:not(:last-of-type) {
+.fixed-header-nav a:not(:last-of-type) {
   padding-right: 15px;
 }
 
-body .fixed-header .fheader__container nav a:hover {
+.fixed-header-nav a:hover {
   color: #ae9054;
 }
 
@@ -281,7 +471,7 @@ body .container__content > div h3 {
 
 /* LIEN TABLEAU */
 .ouvrir-TB-mobile {
-  display: none;;
+  display: none;
 }
 @media (max-width: 768px) {
   .ouvrir-TB-mobile {
@@ -291,11 +481,6 @@ body .container__content > div h3 {
     display: none;
   }
 }
-
-
-
-
-
 
 .lien-TB,
 .lien-PNMA-OFB {
@@ -340,11 +525,9 @@ body .container__content > div h3 {
   }
 
   .tableau-wrapper {
-    height: 1200px;
-  }
-
-  .tableau-frame {
-    transform: scale(0.6);
+    height: 1250px;
+    overflow: scroll;
+    scrollbar-width: thin;
   }
 }
 
@@ -547,11 +730,23 @@ footer div p {
 footer div {
   margin: 0 auto;
 }
+.lien-site-OFB-mobile {
+  display: none;
+}
+@media only screen and (max-width: 640px) {
+  .lien-site-OFB-mobile {
+    display: block;
+  }
+  .lien-site-OFB {
+    display: none;
+  }
+}
+
 .logo-OFB {
   max-height: 60px;
   height: 55px;
   margin-right: 50px;
-  margin-top: -70px;
+  margin-top: -65px;
   float: right;
 }
 .copyright {
@@ -588,6 +783,9 @@ footer div {
     height: 40px;
     margin: 0 auto;
     float: none;
+  }
+  .copyright {
+    margin-top: 20px;
   }
 }
 
@@ -749,8 +947,6 @@ footer div {
   transition: all 0.3s ease-in-out;
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
   color: rgba(84, 114, 174, 1);
   border: solid 1px rgba(84, 114, 174, 1);
   background: none;
@@ -769,4 +965,10 @@ footer div {
 
 .liensAM {
   text-align: center;
+}
+@media (max-width: 768px) {
+  .liensAM,
+  .liens-PNMA-OFB {
+    text-align: justify;
+  }
 }
