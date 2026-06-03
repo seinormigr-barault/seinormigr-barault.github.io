@@ -229,12 +229,14 @@ p:not(.p-AM, .p-chapeau, .copyright, .p-footer, .text-mentions-legales),
 }
 
 /* DEBUT WIDGET VISUALISATION */
+.widget-container {
+  margin-top: 20px;
+}
 .widget-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
-  margin-bottom: 20px;
 }
 
 .widget-left {
