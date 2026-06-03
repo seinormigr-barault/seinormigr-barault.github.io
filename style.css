@@ -92,8 +92,8 @@ main {
 
 .fheader__container img {
   float: left;
-  height: auto;
-  width: 61%;
+  height: 70px;
+  width: auto;
   border-radius: 3px;
   float: left;
 }
