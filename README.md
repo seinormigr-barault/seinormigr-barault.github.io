@@ -1,11 +1,111 @@
-Contenu du dépôt :
- - assets (dossier contenant images, documents...)
- - index.html
- - style.css
- - script.js
+# IndiNAT — Indicateurs Nationaux des Poissons Migrateurs
 
-Structure du site :
+## Présentation du projet
+
+IndiNAT est une plateforme web dédiée à la consultation d’indicateurs nationaux sur les poissons migrateurs amphihalins en France (saumon, aloses, lamproies, truite de mer, mulet porc, etc.).
+
+Le site a été développé dans le cadre du **Plan National en faveur des Migrateurs Amphihalins (PNMA)** par les **Associations Migrateurs de France**, afin de centraliser et valoriser les données de suivi des populations à l’échelle nationale.
+
+L’objectif principal du site est de proposer une interface claire et accessible permettant :
+
+* de présenter le contexte du PNMA et du projet IndiNAT ;
+* de consulter différents indicateurs biologiques et environnementaux ;
+* d’accéder à des tableaux de bord interactifs Tableau Public ;
+* de découvrir les différentes associations migrateurs françaises et leurs territoires d’action.
+
+---
+
+## Structure technique du site
+
+Le projet repose sur une architecture web simple et légère composée de :
+
+* **HTML5** pour la structure du site ;
+* **CSS3** pour le design, les animations et le responsive mobile ;
+* **JavaScript (Vanilla JS + jQuery)** pour les interactions dynamiques ;
+* **Tableau Public** pour l’intégration des visualisations interactives ;
+* **Bootstrap** et **Font Awesome** pour certains composants graphiques.
+
+Le site est entièrement statique.
+
+---
+
+## Fonctionnalités principales
+
+### Navigation fluide
+
+Le site utilise un système de navigation par ancres avec scroll fluide permettant d’accéder rapidement aux différentes sections.
+
+### Header dynamique
+
+Un header fixe apparaît automatiquement lors du défilement afin de conserver un accès rapide au menu de navigation.
+
+### Widget interactif des indicateurs
+
+La section principale du site permet :
+
+* de sélectionner une espèce ;
+* de choisir un indicateur associé ;
+* d’afficher dynamiquement un tableau de bord Tableau Public ;
+* d’ouvrir les visualisations en plein écran ;
+* d’afficher automatiquement l’image de l’espèce sélectionnée.
+
+Toutes les données des indicateurs sont centralisées dans un objet JavaScript facilitant l’ajout futur de nouvelles espèces ou de nouveaux tableaux.
+
+### Responsive design
+
+Le site est entièrement responsive :
+
+* menu burger sur mobile ;
+* réorganisation automatique des blocs ;
+* adaptation des tableaux et images ;
+* optimisation de l’affichage tactile.
+
+### Lightbox Mentions légales
+
+Les mentions légales sont affichées dans une lightbox CSS/HTML sans dépendance externe.
+
+---
+
+## Organisation du projet
+
+```bash
+/
+├── index.html      # Structure principale du site
+├── style.css       # Styles et responsive design
+├── script.js       # Interactions et logique dynamique
+└── assets/         # Images, logos et ressources
+```
+
+---
+
+## Dépendances externes
+
+Le projet utilise plusieurs ressources externes :
+
+* jQuery 3.1.0
+* Bootstrap 3.3.5
+* Font Awesome 4.4.0
+* Google Fonts (Raleway)
+* Tableau Public
+
+---
+
+## Hébergement
+
+Le site est prévu pour être déployé sur tout hébergement statique compatible HTML/CSS/JS.
+
+---
+
+## Auteur / Maintenance
+
+Projet développé pour les **Associations Migrateurs de France**.
+
+
+# Structure du site :
+
+```txt
 indinat.github.io
+│
 ├── index.html
 │   │
 │   ├── <head>
@@ -209,3 +309,4 @@ indinat.github.io
         ├── Overlay
         ├── Animation burger
         └── Fermeture auto clic lien
+```
